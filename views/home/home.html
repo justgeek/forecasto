@@ -1,0 +1,65 @@
+<main-header class="fill-remaining-height-static"></main-header>
+
+<div  class="main-page fill-remaining-height">
+    <div id="empty-card-state" class="text-center" ng-if="variables.cityCards.length===0">
+        <img src="../../img/sad-cloud.png" />
+        <br />
+        <p class="warning-text">You have not added any cities yet !</p>
+    </div>
+
+    <div id="sort-menu" class="shadow-2" ng-show="variables.isSortMenuShown">
+        <p>Sort By:</p>
+        <input ng-model="variables.sortValue"  name="sort" type="radio" value="name" ng-change='updateFilterValue()'/>Name
+        <br />
+        <input ng-model="variables.sortValue" name="sort" type="radio" value="weatherInfo.main.temp" ng-change='updateFilterValue()' />Temperature
+        <br />
+        <input ng-model="variables.sortValue" name="sort" type="radio" value="weatherInfo.wind.speed" ng-change='updateFilterValue()'/>Wind Speed
+        <br />
+        <input ng-model="variables.sortValue" name="sort" type="radio" value="weatherInfo.main.humidity" ng-change='updateFilterValue()'/>Humidity
+        <hr />
+        <p>Order By:</p>
+        <input ng-model="variables.orderValue" name="order" type="radio" value="ascending" ng-change='updateFilterValue()' />Ascending
+        <input ng-model="variables.orderValue"name="order" type="radio" value="descending" ng-change='updateFilterValue()' />Descending
+
+    </div>
+
+    <div id="city-cards-wrap" ng-nicescroll nice-option="variables.nsOptions">
+        <div class="pure-g city-cards">
+            <div class="pure-u-1 pure-u-sm-1-1 pure-u-md-1-2 pure-u-lg-1-3 pure-u-xl-1-4 city-card-wrap"
+                 ng-repeat="city in variables.cityCards | orderBy:variables.filterString">
+                <div class="city-card full-height-width shadow-2">
+                    <div class="card-header">
+                        <span class="city-weather-info">
+                            <span class="city-name" ng-show="city.weatherInfo">{{city.name}}</span>
+                            <br />
+                            <span class="weather-state" ng-show="city.weatherInfo">{{city.weatherInfo.weather[0].main}}</span>
+                        </span>
+
+                        <span class="weather-icon" ng-class="city.weatherInfo.weather[0].icon"></span>
+                    </div>
+                    <div class="card-body">
+                        <span ng-show="city.weatherInfo">{{city.weatherInfo.main.temp}}&deg;</span>
+                        <span class="city-name" ng-show="!city.weatherInfo">{{city.name}}</span>
+
+                    </div>
+                    <div class="card-footer">
+                        <span class="card-footer-status" ng-show="city.weatherInfo">
+                            <span class="icon icon-humidity"></span>
+                            <span class="status-icon-text">{{city.weatherInfo.main.humidity}} %</span>
+                        </span>
+                        <span class="card-footer-status" ng-show="city.weatherInfo">
+                            <span class="icon icon-wind"></span>
+                            <span class="status-icon-text">{{city.weatherInfo.wind.speed}} KM/H</span>
+                        </span>
+                        <span class="remove-city-card">
+                            <a href="" ng-click="removeCity($index)">remove</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+
+</div>
+<main-footer class="fill-remaining-height-static"></main-footer>

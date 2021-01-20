@@ -1,0 +1,17 @@
+{
+  "name": "telenor-weather-application",
+  "version": "1.0.0",
+  "description": "Demo Weather App for telenor group",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -o",
+    "bower:install": "bower install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohammed Taher",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.8.12",
+    "http-server": "^0.9.0"
+  }
+}

@@ -1,0 +1,10 @@
+﻿<div class="main-footer vertical-center-wrap text-center">
+   <div class="button update-results-btn" 
+        ng-class="{'disabled':variables.cityCards.length >= variables.searchThreshold===false}" 
+        ng-disabled="variables.cityCards.length >= variables.searchThreshold===false"
+        ng-click="updateWeather(variables.cityCards)">
+       Get Latest Results   
+   </div>
+   
+    <span class="countdown" ng-if="variables.cityCards.length >= variables.searchThreshold===false">({{5 - variables.cityCards.length}} to go)</span>
+</div>

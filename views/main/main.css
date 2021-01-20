@@ -1,0 +1,18 @@
+/**Genral Styles for any state**/
+.main-page
+{
+    background-color:#2D2633;
+    background-image:url(../../img/globe-map.svg);
+    background-repeat:no-repeat;
+    background-size: auto 80%;
+    background-position: right center;
+}
+.icon.disabled
+{
+    color:#C9C9CB;
+}
+.button.disabled
+{
+    background:#C9C9CB;
+}
+/*********************************/

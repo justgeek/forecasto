@@ -1,0 +1,27 @@
+{
+  "name": "telenor-weather-application",
+  "description": "Demo Weather App for telenor group",
+  "main": "index.js",
+  "authors": [
+    "Mohammed Taher"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/justgeek/forecasto",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "angular": "^1.8.2",
+    "angular-animate": "^1.8.2",
+    "angular-nicescroll": "^0.0.9",
+    "angular-ui-router": "^1.0.29",
+    "oclazyload": "^1.1.0"
+  }
+}

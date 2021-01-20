@@ -1,0 +1,31 @@
+﻿.main-footer
+{
+    height:60px;
+    text-align:center;
+    color:#fff;
+}
+.update-results-btn
+{
+    width: 200px;
+    height: 40px;
+    line-height:40px;
+    cursor:pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color:#2D2633;
+    color: #fff;
+}
+.update-results-btn:active,.update-results-btn:hover
+{
+    color:#fff;
+    background:#808080;
+}
+.update-results-btn:active
+{
+    border:2px solid #fff;
+}
+.countdown
+{
+    margin-left:10px;
+    color:#2D2633;
+}
