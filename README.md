@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
+## Project structure:
+This structure is inspired from the following project:
+https://github.com/akveo/ngx-admin
+
+Even though not all features are used here (like Auth/Guards, Advanced Navigation .. etc), but it can be easily changed in future to enable these modules and make it functional with very little effort
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
