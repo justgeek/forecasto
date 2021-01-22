@@ -31,3 +31,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## What is missing
+- Code linting (e.g. eslint as tslint is deprecated!)
+- Code consistent styling (e.g. prettier)
+- Git hooks, and pre-commits
+- Auth flows, and route guards
+- State manager (e.g. Redux, or NgRx) [not really necessary]

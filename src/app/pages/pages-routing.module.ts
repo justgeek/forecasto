@@ -1,19 +1,19 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
-import { PagesComponent } from './pages.component';
+import { AppPages } from './pages.component';
 import { NotFoundPage } from './miscellaneous/not-found/not-found.page';
-import { ForecasterPage } from './forecaster/forecaster.page';
+import { HomePage } from './home/home.page';
 import { HelpPage } from './help/help.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: PagesComponent,
+    component: AppPages,
     children: [
       {
-        path: 'forecaster',
-        component: ForecasterPage,
+        path: 'home',
+        component: HomePage,
       },
       {
         path: 'help',
@@ -21,7 +21,7 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: 'forecaster',
+        redirectTo: 'home',
         pathMatch: 'full',
       },
       {
