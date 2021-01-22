@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   styleUrls: ['pages.component.scss'],
   template: ` <router-outlet></router-outlet> `,
 })
-export class PagesComponent {}
+export class AppPages {}

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PagesRoutingModule } from './pages-routing.module';
-import { PagesComponent } from './pages.component';
+import { AppPages } from './pages.component';
 
 @NgModule({
   imports: [PagesRoutingModule],
-  declarations: [PagesComponent],
+  declarations: [AppPages],
 })
 export class PagesModule {}
