@@ -1,1 +1,19 @@
-<h1>Hello Forecaster</h1>
+<section id="home-page" class="main-page page">
+  <div class="page-header">
+    <input
+      type="text"
+      class="city-name-input"
+      placeholder="City Name Here ..."
+      [(ngModel)]="cityToAdd"
+      required
+    />
+    <button (click)="addCity()">Add City</button>
+  </div>
+  <div class="page-body">
+    <div class="cities">
+      <div *ngFor="let city of cities">
+        <h1>{{city}}</h1>
+      </div>
+    </div>
+  </div>
+</section>

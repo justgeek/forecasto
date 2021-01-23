@@ -3,10 +3,15 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
 
 ## Project structure:
+
 This structure is inspired from the following project:
 https://github.com/akveo/ngx-admin
 
 Even though not all features are used here (like Auth/Guards, Advanced Navigation .. etc), but it can be easily changed in future to enable these modules and make it functional with very little effort
+
+## Project Goal:
+
+To refactor v1 (while keeping functionality same) with minimal effort.
 
 ## Development server
 
@@ -32,9 +37,13 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## What is missing
+## What is missing (in a production project)
+
 - Code linting (e.g. eslint as tslint is deprecated!)
 - Code consistent styling (e.g. prettier)
 - Git hooks, and pre-commits
 - Auth flows, and route guards
-- State manager (e.g. Redux, or NgRx) [not really necessary]
+- State manager (e.g. Redux, or NgRx) [based on project]
+- Make UI consistent by using a UI Kit/Own UI Kit, and convert global styles to components (e.g. page, page-header, input, button .. etc)
+- Use form instead of a single input
+- Better validation, and better error handling
