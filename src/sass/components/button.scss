@@ -1,0 +1,15 @@
+@import "../mixins.scss";
+
+button {
+  @include primary-input;
+  text-transform: uppercase;
+  background: var(--color-dark);
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  margin: 0 8px;
+
+  &:hover {
+    background: var(--color-seconday);
+  }
+}

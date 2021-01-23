@@ -1,0 +1,6 @@
+@import "../mixins.scss";
+
+input[type="text"] {
+  @include primary-input;
+  font-size: 1.4rem;
+}
