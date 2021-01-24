@@ -1,6 +1,6 @@
-import { endpoints } from '@/config/endpoints.config';
-import { OPEN_WEATHER_API_KEY } from '@/config/variables.config';
-import { HttpProviderService } from '@/app/providers/http-provider/http-provider.service';
+import { endpoints } from '../../../config/endpoints.config';
+import { OPEN_WEATHER_API_KEY } from '../../../config/variables.config';
+import { HttpProviderService } from '../../providers/http-provider/http-provider.service';
 import { Injectable } from '@angular/core';
 
 export interface CityWeatherResponse {

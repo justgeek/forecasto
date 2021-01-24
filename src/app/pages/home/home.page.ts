@@ -1,4 +1,4 @@
-import { isAlphaBetString } from '@/app/utils/validators.util';
+import { isAlphaBetString } from '../../utils/validators.util';
 import { Component } from '@angular/core';
 
 export interface City {
