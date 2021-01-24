@@ -6,7 +6,7 @@ import { CityWeatherResponse, HomeService } from '../../home.service';
   styleUrls: ['./city-weather-card.component.scss'],
   templateUrl: './city-weather-card.component.html',
 })
-export class CityeatherCardComponent implements OnInit {
+export class CityWeatherCardComponent implements OnInit {
   @Input() city!: City;
   @Output() deleteCityEvent = new EventEmitter<City>();
 
@@ -33,6 +33,7 @@ export class CityeatherCardComponent implements OnInit {
 
   confirmCityDeletion(city: City) {
     const { name } = city;
+    /* istanbul ignore else */
     if (confirm(`Sure to remove ${name}?`)) {
       this.deleteCity(city);
     }
