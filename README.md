@@ -47,3 +47,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Make UI consistent by using a UI Kit/Own UI Kit, and convert global styles to components (e.g. page, page-header, input, button .. etc)
 - Use form instead of a single input
 - Better validation, and better error handling
+- Use env vars for secrets instead of exposed variables (but for sake of easier testing)
+- Handle more edge cases (only tested happy scenario)
