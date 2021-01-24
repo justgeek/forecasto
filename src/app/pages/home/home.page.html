@@ -10,6 +10,10 @@
     <button (click)="addCity()">Add City</button>
   </div>
   <div class="page-body">
+    <div *ngIf="cities.length === 0">
+      <empty-home></empty-home>
+    </div>
+
     <div class="city-names">
       <div *ngFor="let city of cities">
         <city-weather-card
