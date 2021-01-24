@@ -2,7 +2,7 @@
   <div class="loading" *ngIf="isLoadingCity">Loading ...</div>
 
   <div *ngIf="cityWeather">
-    <div class="delete-btn" (click)="removeCity(city)">&#10006;</div>
+    <div class="delete-btn" (click)="confirmCityDeletion(city)">&#10006;</div>
     <div class="card-header">
       <span>
         <span class="city-name">{{ cityWeather.name }}</span>

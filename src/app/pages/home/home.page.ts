@@ -28,5 +28,15 @@ export class HomePage {
     }
   }
 
-  deleteCity(cityName: string) {}
+  onDeleteCity(city: City) {
+    // You could pass this directly as input to city card, but in case another party is interested in that event we will use event emitter.
+    this.deleteCity(city);
+  }
+
+  deleteCity(cityToDelete: City) {
+    const cityToDeleteIndex = this.cities.findIndex((city) => {
+      return city.id === cityToDelete.id;
+    });
+    this.cities.splice(cityToDeleteIndex, 1);
+  }
 }

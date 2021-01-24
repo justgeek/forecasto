@@ -14,7 +14,7 @@
       <div *ngFor="let city of cities">
         <city-weather-card
           [city]="city"
-          (deleteCity)="deleteCity"
+          (deleteCityEvent)="deleteCity($event)"
         ></city-weather-card>
       </div>
     </div>
