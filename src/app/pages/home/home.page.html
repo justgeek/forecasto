@@ -10,9 +10,9 @@
     <button (click)="addCity()">Add City</button>
   </div>
   <div class="page-body">
-    <div class="cities">
-      <div *ngFor="let city of cities">
-        <h1>{{city}}</h1>
+    <div class="city-names">
+      <div *ngFor="let cityName of cityNames">
+        <city-weather-card [cityName]="cityName"></city-weather-card>
       </div>
     </div>
   </div>

@@ -1,0 +1,70 @@
+.city-weather-card {
+  position: relative;
+  color: var(--color-tertiary);
+  background-color: var(--color-primary);
+  background-image: url(/assets/img/landmarks.svg);
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  box-sizing: border-box;
+  padding: 12px;
+
+  .loading {
+    justify-self: center;
+    align-self: center;
+  }
+
+  .card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .weather-icon {
+      font-size: 60px;
+    }
+
+    .weather-state {
+      font-size: 18px;
+    }
+
+    .city-name {
+      font-size: 2rem;
+    }
+  }
+
+  .card-body {
+    font-size: 50px;
+    text-align: center;
+  }
+
+  .card-footer,
+  .card-footer-status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-footer {
+    height: 80px;
+    padding: 10px;
+    align-items: flex-end;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .card-footer-status {
+      height: 30px;
+      align-items: center;
+    }
+
+    .icon {
+      font-size: 40px;
+    }
+  }
+}

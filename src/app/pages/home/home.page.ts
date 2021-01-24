@@ -7,16 +7,16 @@ import { Component } from '@angular/core';
   templateUrl: './home.page.html',
 })
 export class HomePage {
-  public cities: string[] = [];
+  public cityNames: string[] = [];
   public cityToAdd = '';
 
   addCity() {
     if (isAlphaBetString(this.cityToAdd)) {
       console.log(this.cityToAdd);
-      this.cities.unshift(this.cityToAdd.toUpperCase());
-    }
-    else{
-      alert("INvalid input. Please use Alphabets only!")
+      this.cityNames.unshift(this.cityToAdd.toUpperCase());
+      this.cityToAdd = '';
+    } else {
+      alert('Invalid input. Please use alphabets only!');
     }
   }
 
