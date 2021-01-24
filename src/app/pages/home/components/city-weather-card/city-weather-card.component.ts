@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
+import { City } from '../../home.page';
 import { CityWeatherResponse, HomeService } from '../../home.service';
 @Component({
   selector: 'city-weather-card',
@@ -6,8 +7,8 @@ import { CityWeatherResponse, HomeService } from '../../home.service';
   templateUrl: './city-weather-card.component.html',
 })
 export class CityeatherCardComponent implements OnInit {
-  @Input() cityName!: string;
-  public city!: CityWeatherResponse;
+  @Input() city!: City;
+  public cityWeather!: CityWeatherResponse;
   public isLoadingCity = true;
   constructor(private homeService: HomeService) {}
 
@@ -17,7 +18,8 @@ export class CityeatherCardComponent implements OnInit {
 
   async getCityWeather() {
     try {
-      this.city = await this.homeService.getCityWeatherByName(this.cityName);
+      const { name } = this.city;
+      this.cityWeather = await this.homeService.getCityWeatherByName(name);
     } catch (e) {
       console.error(e);
     }
