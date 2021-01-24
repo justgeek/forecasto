@@ -1,25 +1,29 @@
 <div class="city-weather-card shadow-2">
   <div class="loading" *ngIf="isLoadingCity">Loading ...</div>
-  <div *ngIf="city">
+
+  <div *ngIf="cityWeather">
+    <div class="delete-btn" (click)="confirmCityDeletion(city)">&#10006;</div>
     <div class="card-header">
       <span>
-        <span class="city-name">{{ city.name }}</span>
+        <span class="city-name">{{ cityWeather.name }}</span>
         <br />
-        <span class="weather-state">{{ city.weather[0].main }}</span>
+        <span class="weather-state">{{ cityWeather.weather[0].main }}</span>
       </span>
-      <span [ngClass]="'weather-icon icon-tw-'+city.weather[0].icon"></span>
+      <span
+        [ngClass]="'weather-icon icon-tw-' + cityWeather.weather[0].icon"
+      ></span>
     </div>
     <div class="card-body">
-      <span>{{ city.main.temp }}&deg;</span>
+      <span>{{ cityWeather.main.temp }}&deg;</span>
     </div>
     <div class="card-footer">
       <span class="card-footer-status">
         <span class="icon icon-humidity"></span>
-        <span class="status-icon-text">{{ city.main.humidity }} %</span>
+        <span class="status-icon-text">{{ cityWeather.main.humidity }} %</span>
       </span>
       <span class="card-footer-status">
         <span class="icon icon-wind"></span>
-        <span class="status-icon-text">{{ city.wind.speed }} KM/H</span>
+        <span class="status-icon-text">{{ cityWeather.wind.speed }} KM/H</span>
       </span>
     </div>
   </div>

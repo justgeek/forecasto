@@ -1,5 +1,9 @@
 #home-page {
-  background-color: var(--color-primary);
+  background-color: var(--color-dark);
+  background-image:url(/assets/img/globe-map.svg);
+  background-repeat:no-repeat;
+  background-size: auto 80%;
+  background-position: right center;
 
   .city-name-input {
     text-transform: uppercase;

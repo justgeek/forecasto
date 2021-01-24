@@ -3,7 +3,7 @@
 button {
   @include primary-input;
   text-transform: uppercase;
-  background: var(--color-dark);
+  background: var(--color-primary);
   cursor: pointer;
   color: white;
   font-weight: bold;

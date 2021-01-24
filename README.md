@@ -49,3 +49,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - Better validation, and better error handling
 - Use env vars for secrets instead of exposed variables (but for sake of easier testing)
 - Handle more edge cases (only tested happy scenario)
+- Use class statics / JSON dictionary for potential translations later

@@ -4,15 +4,18 @@
       type="text"
       class="city-name-input"
       placeholder="City Name Here ..."
-      [(ngModel)]="cityToAdd"
+      [(ngModel)]="cityNameToAdd"
       required
     />
     <button (click)="addCity()">Add City</button>
   </div>
   <div class="page-body">
     <div class="city-names">
-      <div *ngFor="let cityName of cityNames">
-        <city-weather-card [cityName]="cityName"></city-weather-card>
+      <div *ngFor="let city of cities">
+        <city-weather-card
+          [city]="city"
+          (deleteCityEvent)="deleteCity($event)"
+        ></city-weather-card>
       </div>
     </div>
   </div>
